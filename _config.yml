@@ -1,3 +1,10 @@
-title: Continental Breakfast
+title: Continental
 description: Sharing thoughts and experiences
+permalink: /:year/:month/:day/:title/
+
+# Ensure these are uncommented
+plugins:
+  - jekyll-feed
+
+# Choose a theme
 theme: jekyll-theme-minimal
