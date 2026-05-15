@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title | default: "Continental" }} — {{ page.title }}</title>
+  <style>
+    body {font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 50px auto; padding: 0 20px; line-height: 1.65; color: #222;}
+    header {border-bottom: 2px solid #eee; padding-bottom: 30px; margin-bottom: 40px;}
+    h1 {color: #1a73e8; margin: 0 0 8px 0;}
+    nav a {margin-right: 22px; text-decoration: none; color: #1a73e8; font-weight: 500;}
+    nav a:hover {text-decoration: underline;}
+    .post {margin-bottom: 50px;}
+    footer {margin-top: 80px; text-align: center; color: #666; font-size: 0.95em;}
+  </style>
 </head>
 <body>
   <header>
-    <h1>Continental</h1>
+    <h1>{{ site.title }}</h1>
+    <p style="margin: 8px 0 0 0; color: #555;">{{ site.description }}</p>
+    <nav style="margin-top: 20px;">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
   </header>
-  
   {{ content }}
-  
   <footer>
-    © 2026 Continental
+    © {{ "now" | date: "%Y" }} Continental • Powered by <a href="https://jekyllrb.com">Jekyll</a> & GitHub Pages
   </footer>
 </body>
 </html>
