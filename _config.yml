@@ -1,8 +1,16 @@
 title: Continental
 description: Sharing thoughts and experiences
-permalink: /:year/:month/:day/:title/
+
+url: "https://continentaldontmindifido.github.io"
+baseurl: ""
+
+remote_theme: pages-themes/minimal
 
 plugins:
   - jekyll-feed
 
-theme: jekyll-theme-minimal
+header_pages:
+  - index.md
+  - about.md
+
+show_downloads: false
